@@ -1,16 +1,12 @@
 package pengguna;
 
-public class Mhs {
+public class Mhs extends User {
     private String nama;
     private String nim;
     private int smt;
-    private User user;
 
-    public Mhs(String nama, String nim, int smt, String username, String password) {
-        this.nama = nama;
-        this.nim = nim;
-        this.smt = smt;
-        this.user = new User(username, password);
+    public Mhs(String username, String password) {
+        super(username, password);
     }
 
     public String getNama() {
@@ -35,13 +31,5 @@ public class Mhs {
 
     public void setSmt(int smt) {
         this.smt = smt;
-    }
-
-    public User getUser() {
-        return user;
-    }
-
-    public void setUser(User user) {
-        this.user = user;
     }
 }
